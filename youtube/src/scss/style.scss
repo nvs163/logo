@@ -1,0 +1,35 @@
+// Обнуление стилей
+@import "null";
+
+//Основная сетка
+body {
+   perspective: 550px;
+   height: 300px;
+}
+
+//Основной блок
+.youtube {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 300px;
+   height: 200px;
+   margin: 50px auto;
+   position: relative;
+
+   background-color: #dd232c;
+   border-radius: 50px 50px 50px 50px / 30px 30px 30px 30px;
+   box-shadow: -10px 0px 0px #bb0b0b, -40px 0px 15px -10px rgba(0, 0, 0, .15);
+
+   transform: rotateY(30deg);
+
+   &::before {
+      content: "";
+      display: block;
+      position: absolute;
+
+      border-style: solid;
+      border-width: 40px 0 40px 70px;
+      border-color: transparent transparent transparent #fff;
+   }
+}

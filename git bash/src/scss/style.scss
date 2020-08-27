@@ -1,0 +1,249 @@
+//Обнуление стилей
+@import "null";
+
+body {
+   perspective: 600px;
+   background-color: #c7c3c3;
+}
+
+.git-bash {
+   width: 400px;
+   height: 400px;
+   margin: 150px auto;
+   padding: 20px;
+   position: relative;
+
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   align-content: space-evenly;
+
+   background-color: #fff;
+   border-radius: 30px;
+   box-shadow: -15px 15px rgba(0, 0, 0, 0.3);
+
+   transform: rotate(45deg);
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: 48%;
+
+      width: 45%;
+      height: 5%;
+
+      background-color: #fff;
+
+      transform: translate3d(50%, 50%, 0);
+      transform: rotate(45deg);
+   }
+
+   &__pink, &__green, &__yellow, &__blue {
+      width: 48%;
+      height: 47%;
+
+      position: relative;
+   }
+
+   &__pink {
+      background-color: pink;
+      border-radius: 20px 0px;
+
+      &::before {
+         content: "";
+         width: 260px;
+         height: 20px;
+   
+         position: absolute;
+         top: 105px;
+         left: 0px;
+   
+         background-color: #fff;
+   
+         z-index: 1;
+      }
+
+      &::after {
+         content: "";
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+
+         position: absolute;
+         top: 85px;
+         left: 85px;
+
+         background-color: #fff;
+      }
+   }
+   &__green {
+      background-color: green;
+      border-radius: 0px 20px;
+
+      &::after {
+         content: "";
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+
+         border-radius: 50%;
+
+         position: absolute;
+         top: 85px;
+         left: 25px;
+
+         background-color: #fff;
+      }
+   }
+
+   &__yellow {
+      background-color: yellow;
+      border-radius: 0px 20px;
+   }
+
+   &__blue {
+      background-color: blue;
+      border-radius: 20px 0px;
+
+      &::after {
+         content: "";
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+
+         border-radius: 50%;
+
+         position: absolute;
+         top: 25px;
+         left: 25px;
+
+         background-color: #fff;
+      }
+   }
+}
+
+
+.gb {
+   width: 400px;
+   height: 400px;
+   margin: 200px auto;
+
+   background-color: #fff;
+   border-radius: 30px;
+
+   position: relative;
+
+   transform: rotate(45deg);
+
+   &-top, &-bottom {
+      width: 100%;
+      height: 50%;
+      position: relative;
+
+      &::before, &::after {
+         content: "";
+         width: 50%;
+         height: 100%;
+
+         position: absolute;
+         top: 0;
+
+         border: 8px solid #fff;
+      }
+      &::before {
+         left: 0;
+      }
+      &::after {
+         right: 0;
+      }
+   }
+
+   &-top {
+      &::before {
+         background-color: #fa3e3e;
+         border-radius: 30px 0px 30px 0px;
+      }
+
+      &::after {
+         background-color: #5fda07;
+         border-radius: 0px 30px 0px 30px;
+      }
+   }
+
+   &-bottom {
+      &::before {
+         background-color: #3615f3;
+         border-radius: 0px 30px 0px 30px;
+      }
+
+      &::after {
+         background-color: #f5f822;
+         border-radius: 30px 0px 30px 0px;
+      }
+   }
+
+   &-line {
+      width: 50%;
+      height: 30px;
+
+      background-color: #fff;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate3d(-50%, -50%, 0) rotate(45deg);
+
+      &::before, &::after {
+         content: "";
+         width: 60px;
+         height: 60px;
+         display: block;
+         border-radius: 50%;
+
+         background-color: #fff;
+
+         position: absolute;
+         top: 50%;
+      }
+
+      &::before {
+         right: 100%;
+
+         transform: translate3d(50%, -50%, 0);
+      }
+
+      &::after {
+         left: 100%;
+
+         transform: translate3d(-50%, -50%, 0);
+      }
+   }
+
+   &-horizontal {
+      width: 70%;
+      height: 30px;
+
+      background-color: #fff;
+
+      position: absolute;
+      top: 115px;
+      left: 0px;
+
+      &::after {
+         content: "";
+         width: 60px;
+         height: 60px;
+         display: block;
+         border-radius: 50%;
+
+         background-color: #fff;
+
+         position: absolute;
+         top: 50%;
+         left: 100%;
+
+         transform: translate3d(-50%, -50%, 0);
+      }
+   }
+}
